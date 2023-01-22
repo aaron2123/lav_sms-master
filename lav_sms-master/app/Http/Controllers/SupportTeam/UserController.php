@@ -135,6 +135,13 @@ class UserController extends Controller
             $data['username'] = $user->username;
         }
 
+        // if($req->file('image')){
+        //     $file= $req->file('image');
+        //     $filename= date('YmdHi').$file->getClientOriginalName();
+        //     $file-> move(public_path('public/Image'), $filename);
+        //     $data['image']= $filename;
+        // }
+
         if($req->hasFile('photo')) {
             $photo = $req->file('photo');
             $f = Qs::getFileMetaData($photo);

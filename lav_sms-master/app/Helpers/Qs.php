@@ -234,6 +234,12 @@ class Qs
         return 'uploads/'.$user_type.'/';
     }
 
+    
+    // public function viewImage(){
+    //     $imageData= Postimage::all();
+    //     return view('Image.view_image', compact('imageData'));
+    // }
+
     public static function getFileMetaData($file)
     {
         //$dataFile['name'] = $file->getClientOriginalName();
