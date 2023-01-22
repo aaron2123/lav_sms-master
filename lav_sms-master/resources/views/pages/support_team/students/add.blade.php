@@ -117,8 +117,8 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="d-block">Upload Passport Photo:</label>
-                                <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
+                                <label class="d-block">Upload Photo:</label>
+                                <input accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
                                 <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
                             </div>
                         </div>
