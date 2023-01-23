@@ -135,20 +135,20 @@ class UserController extends Controller
             $data['username'] = $user->username;
         }
 
-        // if($req->file('image')){
-        //     $file= $req->file('image');
-        //     $filename= date('YmdHi').$file->getClientOriginalName();
-        //     $file-> move(public_path('public/Image'), $filename);
-        //     $data['image']= $filename;
-        // }
-
-        if($req->hasFile('photo')) {
-            $photo = $req->file('photo');
-            $f = Qs::getFileMetaData($photo);
-            $f['name'] = 'photo.' . $f['ext'];
-            $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$user->code, $f['name']);
-            $data['photo'] = asset('storage/' . $f['path']);
+        if($req->file('photo')){
+            $file= $req->file('photo');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('public/Image'), $filename);
+            $data['photo']= $filename;
         }
+
+        // if($req->hasFile('photo')) {
+        //     $photo = $req->file('photo');
+        //     $f = Qs::getFileMetaData($photo);
+        //     $f['name'] = 'photo.' . $f['ext'];
+        //     $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type).$user->code, $f['name']);
+        //     $data['photo'] = asset('storage/' . $f['path']);
+        // }
 
         $this->user->update($id, $data);   /* UPDATE USER RECORD */
 

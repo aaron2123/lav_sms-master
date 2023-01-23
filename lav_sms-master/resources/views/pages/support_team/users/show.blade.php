@@ -5,8 +5,8 @@
         <div class="col-md-3 text-center">
             <div class="card">
                 <div class="card-body">
-                   
-                    <img src="{{ $user->photo }}" alt="photo" class="rounded-circle">
+                    <img src="/image/{{ $user->photo  }}" width="500px">
+                    {{-- <img src="{{ $user->photo }}" alt="photo" class="rounded-circle"> --}}
                     <br>
                     <h3 class="mt-3">{{ $user->photo }}</h3>
                 </div>

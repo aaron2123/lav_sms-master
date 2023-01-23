@@ -25,8 +25,10 @@
                         {{--Print Button--}}
                         <div class="text-center mt-3">
                             <a target="_blank" href="{{ route('marks.print', [Qs::hash($student_id), $ex->id, $year]) }}" class="btn btn-secondary btn-lg">Print Marksheet <i class="icon-printer ml-2"></i></a>
+                            <a target="_blank" href="#" class="btn btn-success btn-lg">Sent To Email <i class="icon-envelope ml-2"></i></a>
+                            
                         </div>
-
+                       
                     </div>
 
                 </div>

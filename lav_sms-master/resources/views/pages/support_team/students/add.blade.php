@@ -118,7 +118,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="d-block">Upload Photo:</label>
-                                <input accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
+                                <input type="file" name="image" class="form-control" placeholder="image">
+                                {{-- <input accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc> --}}
                                 <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
                             </div>
                         </div>
